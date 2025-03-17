@@ -1,4 +1,4 @@
-import { Container, Entity, EntityEquippableComponent, EntityInventoryComponent, EquipmentSlot, ItemStack, Player } from "@minecraft/server";
+import { Container, Entity, EntityEquippableComponent, EntityInventoryComponent, Player } from "@minecraft/server";
 
 export class Inventory {
     private source: Player | Entity;
