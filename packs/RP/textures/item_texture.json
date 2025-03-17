@@ -1,0 +1,24 @@
+{
+	"resource_pack_name": "vxl_custom_tree",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"vxl_custom_tree_sapling": {
+			"textures": "textures/vxl_custom_tree/blocks/sapling"
+		},
+		"vxl_custom_tree_door": {
+			"textures": "textures/vxl_custom_tree/items/door"
+		},
+		"vxl_custom_tree_boat": {
+			"textures": "textures/vxl_custom_tree/items/boat"
+		},
+		"vxl_custom_tree_chestboat": {
+			"textures": "textures/vxl_custom_tree/items/chestboat"
+		},
+		"vxl_custom_tree_sign": {
+			"textures": "textures/vxl_custom_tree/items/sign"
+		},
+		"vxl_custom_tree_hanging_sign": {
+			"textures": "textures/vxl_custom_tree/items/hanging_sign"
+		}
+	}
+}

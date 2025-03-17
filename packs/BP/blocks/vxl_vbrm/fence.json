@@ -1,0 +1,157 @@
+{
+    "format_version": "1.21.50",
+    "minecraft:block": {
+      "description": {
+        "identifier": "vxl:custom_tree_fence",
+        "menu_category":{"category":"construction","group":"itemGroup.name.fence","is_hidden_in_commands":false},
+        "states": {
+          "vxl:north_bit":[false, true],
+          "vxl:south_bit":[false, true],
+          "vxl:east_bit":[false, true],
+          "vxl:west_bit":[false, true],
+          "vxl:placed_bit":[false, true]
+        }
+      },
+      "components": {
+        "tag:vxl_custom": {},
+        "tag:minecraft:is_axe_item_destructible": {},"tag:wood": {},"tag:fence": {},
+        "minecraft:custom_components": ["vxl:fence"],
+        "minecraft:map_color": "#ffffff",
+        "minecraft:destructible_by_mining":{"seconds_to_destroy":1.0},
+        "minecraft:destructible_by_explosion":{"explosion_resistance":30},
+        "minecraft:material_instances": {"*": {"texture": "vxl_custom_tree_planks"}},
+        "minecraft:geometry": {
+          "identifier": "geometry.vxl_custom.fence",
+          "bone_visibility": {
+            "north": "q.block_state('vxl:placed_bit') && q.block_state('vxl:north_bit')",
+            "south": "q.block_state('vxl:placed_bit') && q.block_state('vxl:south_bit')",
+            "east": "q.block_state('vxl:placed_bit') && q.block_state('vxl:east_bit')",
+            "west": "q.block_state('vxl:placed_bit') && q.block_state('vxl:west_bit')",
+            "center": "q.block_state('vxl:placed_bit')",
+            "render": "!q.block_state('vxl:placed_bit')"
+          }
+        }
+      },
+      "permutations": [
+        {
+          "condition": "!q.block_state('vxl:north_bit') && !q.block_state('vxl:south_bit') && !q.block_state('vxl:east_bit') && !q.block_state('vxl:west_bit')",
+          "components": {
+            "minecraft:collision_box":{"origin":[-2, 0, -2],"size":[4, 16, 4]},
+            "minecraft:selection_box":{"origin":[-2, 0, -2],"size":[4, 16, 4]}
+          }
+        },
+        //North
+        {
+          "condition": "q.block_state('vxl:north_bit') && !q.block_state('vxl:south_bit') && !q.block_state('vxl:east_bit') && !q.block_state('vxl:west_bit')",
+          "components": {
+            "minecraft:collision_box":{"origin":[-2, 0, -6],"size":[4, 16, 8]},
+            "minecraft:selection_box":{"origin":[-2, 0, -6],"size":[4, 16, 8]}
+          }
+        },
+        //South
+        {
+          "condition": "!q.block_state('vxl:north_bit') && q.block_state('vxl:south_bit') && !q.block_state('vxl:east_bit') && !q.block_state('vxl:west_bit')",
+          "components": {
+            "minecraft:collision_box":{"origin":[-2, 0, -2],"size":[4, 16, 8]},
+            "minecraft:selection_box":{"origin":[-2, 0, -2],"size":[4, 16, 8]}
+          }
+        },
+        //East
+        {
+          "condition": "!q.block_state('vxl:north_bit') && !q.block_state('vxl:south_bit') && q.block_state('vxl:east_bit') && !q.block_state('vxl:west_bit')",
+          "components": {
+            "minecraft:collision_box":{"origin":[-6, 0, -2],"size":[8, 16, 4]},
+            "minecraft:selection_box":{"origin":[-6, 0, -2],"size":[8, 16, 4]}
+          }
+        },
+        //West
+        {
+          "condition": "!q.block_state('vxl:north_bit') && !q.block_state('vxl:south_bit') && !q.block_state('vxl:east_bit') && q.block_state('vxl:west_bit')",
+          "components": {
+            "minecraft:collision_box":{"origin":[-2, 0, -2],"size":[8, 16, 4]},
+            "minecraft:selection_box":{"origin":[-2, 0, -2],"size":[8, 16, 4]}
+          }
+        },
+        //NorthSouth
+        {
+          "condition": "q.block_state('vxl:north_bit') && q.block_state('vxl:south_bit') && !q.block_state('vxl:east_bit') && !q.block_state('vxl:west_bit')",
+          "components": {
+            "minecraft:collision_box":{"origin":[-2, 0, -6],"size":[4, 16, 12]},
+            "minecraft:selection_box":{"origin":[-2, 0, -6],"size":[4, 16, 12]}
+          }
+        },
+        //EastWest
+        {
+          "condition": "!q.block_state('vxl:north_bit') && !q.block_state('vxl:south_bit') && q.block_state('vxl:east_bit') && q.block_state('vxl:west_bit')",
+          "components": {
+            "minecraft:collision_box":{"origin": [-6, 0, -2],"size": [12, 16, 4]},
+            "minecraft:selection_box":{"origin": [-6, 0, -2],"size": [12, 16, 4]}
+          }
+        },
+        //NorthEast
+        {
+          "condition": "q.block_state('vxl:north_bit') && !q.block_state('vxl:south_bit') && q.block_state('vxl:east_bit') && !q.block_state('vxl:west_bit')",
+          "components": {
+            "minecraft:collision_box":{"origin":[-6, 0, -6],"size":[8, 16, 8]},
+            "minecraft:selection_box":{"origin":[-6, 0, -6],"size":[8, 16, 8]}
+          }
+        },
+        //NorthWest
+        {
+          "condition": "q.block_state('vxl:north_bit') && !q.block_state('vxl:south_bit') && !q.block_state('vxl:east_bit') && q.block_state('vxl:west_bit')",
+          "components": {
+            "minecraft:collision_box":{"origin": [-2, 0, -6],"size": [8, 16, 8]},
+            "minecraft:selection_box":{"origin": [-2, 0, -6],"size": [8, 16, 8]}
+          }
+        },
+        //SouthEast
+        {
+          "condition": "!q.block_state('vxl:north_bit') && q.block_state('vxl:south_bit') && q.block_state('vxl:east_bit') && !q.block_state('vxl:west_bit')",
+          "components": {
+            "minecraft:collision_box":{"origin": [-6, 0, -2],"size": [8, 16, 8]},
+            "minecraft:selection_box":{"origin": [-6, 0, -2],"size": [8, 16, 8]}
+          }
+        },
+        //SouthWest
+        {
+          "condition": "!q.block_state('vxl:north_bit') && q.block_state('vxl:south_bit') && !q.block_state('vxl:east_bit') && q.block_state('vxl:west_bit')",
+          "components": {
+            "minecraft:collision_box":{"origin": [-2, 0, -2],"size": [8, 16, 8]},
+            "minecraft:selection_box":{"origin": [-2, 0, -2],"size": [8, 16, 8]}
+          }
+        },
+        //NorthSouthEast
+        {
+          "condition": "q.block_state('vxl:north_bit') && q.block_state('vxl:south_bit') && q.block_state('vxl:east_bit') && !q.block_state('vxl:west_bit')",
+          "components": {
+            "minecraft:collision_box":{"origin": [-6, 0, -6],"size": [8, 16, 12]},
+            "minecraft:selection_box":{"origin": [-6, 0, -6],"size": [8, 16, 12]}
+          }
+        },
+        //NorthSouthWest
+        {
+          "condition": "q.block_state('vxl:north_bit') && q.block_state('vxl:south_bit') && !q.block_state('vxl:east_bit') && q.block_state('vxl:west_bit')",
+          "components": {
+            "minecraft:collision_box":{"origin": [-2, 0, -6],"size": [8, 16, 12]},
+            "minecraft:selection_box":{"origin": [-2, 0, -6],"size": [8, 16, 12]}
+          }
+        },
+        //NorthEastWest
+        {
+          "condition": "q.block_state('vxl:north_bit') && !q.block_state('vxl:south_bit') && q.block_state('vxl:east_bit') && q.block_state('vxl:west_bit')",
+          "components": {
+            "minecraft:collision_box":{"origin": [-6, 0, -6],"size": [12, 16, 8]},
+            "minecraft:selection_box":{"origin": [-6, 0, -6],"size": [12, 16, 8]}
+          }
+        },
+        //SouthEastWest
+        {
+          "condition": "!q.block_state('vxl:north_bit') && q.block_state('vxl:south_bit') && q.block_state('vxl:east_bit') && q.block_state('vxl:west_bit')",
+          "components": {
+            "minecraft:collision_box":{"origin": [-6, 0, -2],"size": [12, 16, 8]},
+            "minecraft:selection_box":{"origin": [-6, 0, -2],"size": [12, 16, 8]}
+          }
+        }
+      ]
+    }
+  }

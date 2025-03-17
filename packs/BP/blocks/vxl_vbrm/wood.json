@@ -1,0 +1,33 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vxl:custom_tree_wood",
+			"menu_category":{"category":"nature","group":"itemGroup.name.wood"},
+			"traits": {"minecraft:placement_position": {"enabled_states": ["minecraft:block_face"]}}
+		},
+		"components": {
+			"tag:vxl_custom": {},"tag:vxl_is_strippable": {},
+			"tag:minecraft:is_axe_item_destructible": {},"tag:wood": {},
+			"minecraft:map_color": "#ffffff",
+			"minecraft:destructible_by_mining":{"seconds_to_destroy":1},
+			"minecraft:destructible_by_explosion":{"explosion_resistance":1},
+			"minecraft:geometry": {"identifier": "minecraft:geometry.full_block"},
+			"minecraft:material_instances": {"*": {"texture": "vxl_custom_tree_log_side"}}
+		}
+	},
+	"permutations": [
+		{
+			"condition": "q.block_state('minecraft:block_face') == 'west' || q.block_state('minecraft:block_face') == 'east'",
+			"components":{"minecraft:transformation":{"rotation":[0,0,90]}}
+		},
+		{
+			"condition": "q.block_state('minecraft:block_face') == 'down' || q.block_state('minecraft:block_face') == 'up'",
+			"components":{"minecraft:transformation":{"rotation":[0,0,0]}}
+		},
+		{
+			"condition": "q.block_state('minecraft:block_face') == 'north' || q.block_state('minecraft:block_face') == 'south'",
+			"components":{"minecraft:transformation":{"rotation":[90,0,0]}}
+		}
+	]
+}

@@ -1,0 +1,21 @@
+{
+	"num_mip_levels": 4,
+	"padding": 8,
+	"resource_pack_name": "vxl_custom_tree",
+	"texture_name": "atlas.terrain",
+	"texture_data": {
+		"vxl_custom_tree_door_lower":{"textures":"textures/vxl_custom_tree/blocks/door_lower"},
+		"vxl_custom_tree_door_upper":{"textures":"textures/vxl_custom_tree/blocks/door_upper"},
+		"vxl_custom_tree_hanging_sign":{"textures":"textures/vxl_custom_tree/entity/spruce_hanging_sign"},
+		"vxl_custom_tree_leaves_opaque":{"textures":"textures/vxl_custom_tree/blocks/leaves_opaque"},
+		"vxl_custom_tree_leaves":{"textures":"textures/vxl_custom_tree/blocks/leaves"},
+		"vxl_custom_tree_log_side":{"textures":"textures/vxl_custom_tree/blocks/log"},
+		"vxl_custom_tree_log_top":{"textures":"textures/vxl_custom_tree/blocks/log_top"},
+		"vxl_custom_tree_planks":{"textures":"textures/vxl_custom_tree/blocks/planks"},
+		"vxl_custom_tree_sapling":{"textures":"textures/vxl_custom_tree/blocks/sapling"},
+		"vxl_custom_tree_sign":{"textures":"textures/vxl_custom_tree/entity/sign"},
+		"vxl_custom_tree_trapdoor":{"textures":"textures/vxl_custom_tree/blocks/trapdoor"},
+		"vxl_stripped_custom_tree_log_side":{"textures":"textures/vxl_custom_tree/blocks/stripped_log"},
+		"vxl_stripped_custom_tree_log_top":{"textures":"textures/vxl_custom_tree/blocks/stripped_log_top"}
+	}
+}

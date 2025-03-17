@@ -1,0 +1,62 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:block": {
+		"description": {
+			"identifier": "vxl:custom_tree_fence_gate",
+			"menu_category":{"category":"construction","group":"itemGroup.name.fenceGate"},
+			"traits":{"minecraft:placement_direction":{"enabled_states":["minecraft:cardinal_direction"]}},
+			"states":{"vxl:placed_bit":[false,true],"vxl:open_bit":[false,true]}
+			
+		},
+		"components": {
+			"tag:vxl_custom": {},
+			"tag:minecraft:is_axe_item_destructible": {},"tag:wood": {},"tag:vxl_fence": {},
+			"minecraft:material_instances": {"*": {"texture": "vxl_custom_tree_planks"}},
+			"minecraft:map_color": "#835187",
+			"minecraft:destructible_by_mining":{"seconds_to_destroy":1.0},
+			"minecraft:destructible_by_explosion":{"explosion_resistance":30},
+			"minecraft:geometry": {
+				"identifier": "geometry.vxl_custom.fence_gate",
+				"bone_visibility": {
+					"render": "query.block_state('vxl:placed_bit') == false",
+					"fence_gate": "query.block_state('vxl:placed_bit') == true",
+					"northsouth": "query.block_state('vxl:placed_bit') == true && (query.block_state('minecraft:cardinal_direction') == 'north' || query.block_state('minecraft:cardinal_direction') == 'south')",
+					"nsclose": "query.block_state('vxl:placed_bit') == true && query.block_state('vxl:open_bit') == false && (query.block_state('minecraft:cardinal_direction') == 'north' || query.block_state('minecraft:cardinal_direction') == 'south')",
+					"nsopen_north": "query.block_state('vxl:placed_bit') == true && (query.block_state('vxl:open_bit') == true && query.block_state('minecraft:cardinal_direction') == 'north')",
+					"nsopen_south": "query.block_state('vxl:placed_bit') == true && (query.block_state('vxl:open_bit') == true && query.block_state('minecraft:cardinal_direction') == 'south')",
+					"westeast": "query.block_state('vxl:placed_bit') == true && (query.block_state('minecraft:cardinal_direction') == 'west' || query.block_state('minecraft:cardinal_direction') == 'east')",
+					"weclose": "query.block_state('vxl:placed_bit') == true && query.block_state('vxl:open_bit') == false && (query.block_state('minecraft:cardinal_direction') == 'west' || query.block_state('minecraft:cardinal_direction') == 'east')",
+					"weopen_west": "query.block_state('vxl:placed_bit') == true && (query.block_state('vxl:open_bit') == true && query.block_state('minecraft:cardinal_direction') == 'west')",
+					"weopen_east": "query.block_state('vxl:placed_bit') == true && (query.block_state('vxl:open_bit') == true && query.block_state('minecraft:cardinal_direction') == 'east')"
+				}
+			},
+			"minecraft:custom_components":["vxl:fence_gate"],
+			"minecraft:light_dampening": 0,
+			"minecraft:transformation":{"translation":[0, 0.3, 0]}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_state('vxl:open_bit') == true",
+				"components": {
+					"minecraft:collision_box": false
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:cardinal_direction') == 'north' || query.block_state('minecraft:cardinal_direction') == 'south'",
+				"components":{"minecraft:selection_box":{"origin":[-8,0,-2],"size":[16,11,4]}}
+			},
+			{
+				"condition": "query.block_state('vxl:open_bit') == false && (query.block_state('minecraft:cardinal_direction') == 'north' || query.block_state('minecraft:cardinal_direction') == 'south')",
+				"components":{"minecraft:collision_box":{"origin":[-8,0,-2],"size":[16,16,4]}}
+			},
+			{
+				"condition": "query.block_state('minecraft:cardinal_direction') == 'west' || query.block_state('minecraft:cardinal_direction') == 'east'",
+				"components":{"minecraft:selection_box":{"origin":[-2,0,-8],"size":[4,11,16]}}
+			},
+			{
+				"condition": "query.block_state('vxl:open_bit') == false && (query.block_state('minecraft:cardinal_direction') == 'west' || query.block_state('minecraft:cardinal_direction') == 'east')",
+				"components":{"minecraft:collision_box":{"origin":[-2,0,-8],"size":[4,16,16]}}
+			}
+		]
+	}
+}

@@ -1,0 +1,44 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "pack.description",
+        "name": "pack.name",
+        "uuid": "94ddd3ad-4d0f-49a2-96f9-6add598e17e4",
+        "version": [
+            0,
+            0,
+            0
+        ],
+        "min_engine_version": [
+            1,
+            20,
+            81
+        ]
+    },
+    "modules": [
+        {
+            "type": "resources",
+            "uuid": "26806ebc-8c3c-4133-abe8-a6b8906a49f0",
+            "version": [
+                0,
+                0,
+                0
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "8eae16e5-e530-4ccd-bb4e-0572e4767952",
+            "version": [
+                0,
+                0,
+                0
+            ]
+        }
+    ],
+    "metadata": {
+        "authors": [
+            "voxel_labs"
+        ]
+    }
+}

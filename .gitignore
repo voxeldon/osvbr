@@ -1,0 +1,6 @@
+/build
+/.regolith
+/node_modules
+/packs/BP/scripts
+/tool/__pycache__
+/tool/output

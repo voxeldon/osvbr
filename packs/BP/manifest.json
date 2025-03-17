@@ -1,0 +1,63 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "pack.description",
+        "name": "pack.name",
+        "uuid": "8eae16e5-e530-4ccd-bb4e-0572e4767952",
+        "version": [
+            0,
+            0,
+            0
+        ],
+        "min_engine_version": [
+            1,
+            21,
+            41
+        ]
+    },
+    "modules": [
+        {
+            "type": "data",
+            "uuid": "fabcbb01-7936-4810-ac49-73306e5ea712",
+            "version": [
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "type": "script",
+            "language": "javascript",
+            "uuid": "3975ff05-2ce9-4342-8dd7-e2abf7acea87",
+            "version": [
+                0,
+                0,
+                0
+            ],
+            "entry": "scripts/vxl_vbrm/index.js"
+        }
+    ],
+    "metadata": {
+        "authors": [
+            "voxel_labs"
+        ]
+    },
+    "dependencies": [
+        {
+            "uuid": "94ddd3ad-4d0f-49a2-96f9-6add598e17e4",
+            "version": [
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "module_name": "@minecraft/server",
+            "version": "1.17.0"
+        },
+        {
+            "module_name": "@minecraft/server-ui",
+            "version": "1.3.0"
+        }
+    ]
+}

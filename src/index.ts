@@ -1,0 +1,27 @@
+import { world } from "@minecraft/server";
+import { DoorComponent } from "./components/door";
+import { FenceComponent } from "./components/fence";
+import { FenceGateComponent } from "./components/fence_gate";
+import { SaplingComponent } from "./components/sapling";
+import { StairsComponent } from "./components/stairs";
+import { TrapdoorComponent } from "./components/trapdoor";
+import { ShearItemDestructible } from "./components/shear_item_destructible";
+import { PressurePlate } from "./components/pressure_plate";
+import { ButtonComponent } from "./components/button";
+import { Leaf } from "./components/leaf";
+import { SlabComponent } from "./components/slab";
+import { StrippableBlockComponent } from "./components/strippable";
+world.beforeEvents.worldInitialize.subscribe(initEvent => {
+    initEvent.blockComponentRegistry.registerCustomComponent(ButtonComponent.id, new ButtonComponent());
+    initEvent.blockComponentRegistry.registerCustomComponent(DoorComponent.id, new DoorComponent());
+    initEvent.blockComponentRegistry.registerCustomComponent(FenceGateComponent.id, new FenceGateComponent());
+    initEvent.blockComponentRegistry.registerCustomComponent(FenceComponent.id, new FenceComponent());
+    initEvent.blockComponentRegistry.registerCustomComponent(Leaf.id, new Leaf());
+    initEvent.blockComponentRegistry.registerCustomComponent(PressurePlate.id, new PressurePlate());
+    initEvent.blockComponentRegistry.registerCustomComponent(SaplingComponent.id, new SaplingComponent());
+    initEvent.blockComponentRegistry.registerCustomComponent(ShearItemDestructible.id, new ShearItemDestructible());
+    initEvent.blockComponentRegistry.registerCustomComponent(SlabComponent.id, new SlabComponent());
+    initEvent.blockComponentRegistry.registerCustomComponent(StairsComponent.id, new StairsComponent());
+    initEvent.blockComponentRegistry.registerCustomComponent(TrapdoorComponent.id, new TrapdoorComponent());
+});
+StrippableBlockComponent.registerGlobalComponent();
