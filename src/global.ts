@@ -6,6 +6,6 @@ export enum SoundDefinition {
     PlaceWood = 'use.wood'
 }
 
-export const PACK_ID: string = 'vxl';
-export const GLOBAL_BLOCK_TAG: string = 'vxl_custom';
-export const STRUCTURE_PATH: string = 'vxl_vbrm/custom_tree';
+export const PACK_ID: string = 'osvbr';
+export const GLOBAL_BLOCK_TAG: string = 'osvbr_custom';
+export const STRUCTURE_PATH: string = 'osvbr_vbrm/custom_tree';

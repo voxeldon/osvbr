@@ -1,6 +1,5 @@
 import { world } from "@minecraft/server";
 import { DoorComponent } from "./components/door";
-import { FenceComponent } from "./components/fence";
 import { FenceGateComponent } from "./components/fence_gate";
 import { SaplingComponent } from "./components/sapling";
 import { StairsComponent } from "./components/stairs";
@@ -11,6 +10,7 @@ import { ButtonComponent } from "./components/button";
 import { Leaf } from "./components/leaf";
 import { SlabComponent } from "./components/slab";
 import { StrippableBlockComponent } from "./components/strippable";
+import { FenceComponent } from "./components/fence2.0";
 world.beforeEvents.worldInitialize.subscribe(initEvent => {
     initEvent.blockComponentRegistry.registerCustomComponent(ButtonComponent.id, new ButtonComponent());
     initEvent.blockComponentRegistry.registerCustomComponent(DoorComponent.id, new DoorComponent());

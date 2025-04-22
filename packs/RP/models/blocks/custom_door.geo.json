@@ -3,46 +3,182 @@
 	"minecraft:geometry": [
 		{
 			"description": {
-				"identifier": "geometry.vxl_custom.door",
+				"identifier": "geometry.osvbr_custom.door",
 				"texture_width": 16,
 				"texture_height": 16,
 				"visible_bounds_width": 3,
 				"visible_bounds_height": 2.5,
-				"visible_bounds_offset": [0, 0.75, 0]
+				"visible_bounds_offset": [
+					0,
+					0.75,
+					0
+				]
 			},
 			"bones": [
 				{
 					"name": "closed",
-					"pivot": [0, 0, 0],
+					"pivot": [
+						0,
+						0,
+						0
+					],
 					"cubes": [
 						{
-							"origin": [-8, 0, -8],
-							"size": [16, 16, 3],
+							"origin": [
+								-8,
+								0,
+								-8
+							],
+							"size": [
+								16,
+								16,
+								3
+							],
 							"uv": {
-								"north": {"uv": [0, 0], "uv_size": [16, 16], "material_instance": "upper"},
-								"east": {"uv": [3, 0], "uv_size": [-3, 16], "material_instance": "upper"},
-								"south": {"uv": [16, 0], "uv_size": [-16, 16], "material_instance": "upper"},
-								"west": {"uv": [13, 0], "uv_size": [3, 16], "material_instance": "upper"},
-								"up": {"uv": [16, 3], "uv_size": [-16, -3], "material_instance": "upper"}
+								"north": {
+									"uv": [
+										0,
+										0
+									],
+									"uv_size": [
+										16,
+										16
+									],
+									"material_instance": "upper"
+								},
+								"east": {
+									"uv": [
+										3,
+										0
+									],
+									"uv_size": [
+										-3,
+										16
+									],
+									"material_instance": "upper"
+								},
+								"south": {
+									"uv": [
+										16,
+										0
+									],
+									"uv_size": [
+										-16,
+										16
+									],
+									"material_instance": "upper"
+								},
+								"west": {
+									"uv": [
+										13,
+										0
+									],
+									"uv_size": [
+										3,
+										16
+									],
+									"material_instance": "upper"
+								},
+								"up": {
+									"uv": [
+										16,
+										3
+									],
+									"uv_size": [
+										-16,
+										-3
+									],
+									"material_instance": "upper"
+								}
 							}
 						}
 					]
 				},
 				{
 					"name": "open",
-					"pivot": [0, 0, 0],
+					"pivot": [
+						0,
+						0,
+						0
+					],
 					"cubes": [
 						{
-							"origin": [-14.5, 0, -1.5],
-							"size": [16, 16, 3],
-							"pivot": [-6.5, 8, 0],
-							"rotation": [0, 90, 0],
+							"origin": [
+								-14.5,
+								0,
+								-1.5
+							],
+							"size": [
+								16,
+								16,
+								3
+							],
+							"pivot": [
+								-6.5,
+								8,
+								0
+							],
+							"rotation": [
+								0,
+								90,
+								0
+							],
 							"uv": {
-								"north": {"uv": [16, 0], "uv_size": [-16, 16], "material_instance": "upper"},
-								"east": {"uv": [16, 0], "uv_size": [-3, 16], "material_instance": "upper"},
-								"south": {"uv": [0, 0], "uv_size": [16, 16], "material_instance": "upper"},
-								"west": {"uv": [0, 0], "uv_size": [3, 16], "material_instance": "upper"},
-								"up": {"uv": [16, 3], "uv_size": [-16, -3], "material_instance": "upper"}
+								"north": {
+									"uv": [
+										16,
+										0
+									],
+									"uv_size": [
+										-16,
+										16
+									],
+									"material_instance": "upper"
+								},
+								"east": {
+									"uv": [
+										16,
+										0
+									],
+									"uv_size": [
+										-3,
+										16
+									],
+									"material_instance": "upper"
+								},
+								"south": {
+									"uv": [
+										0,
+										0
+									],
+									"uv_size": [
+										16,
+										16
+									],
+									"material_instance": "upper"
+								},
+								"west": {
+									"uv": [
+										0,
+										0
+									],
+									"uv_size": [
+										3,
+										16
+									],
+									"material_instance": "upper"
+								},
+								"up": {
+									"uv": [
+										16,
+										3
+									],
+									"uv_size": [
+										-16,
+										-3
+									],
+									"material_instance": "upper"
+								}
 							}
 						}
 					]

@@ -3,7 +3,7 @@
 	"minecraft:geometry": [
 		{
 			"description": {
-				"identifier": "geometry.vxl_custom.boat",
+				"identifier": "geometry.osvbr_custom.boat",
 				"texture_width": 128,
 				"texture_height": 64,
 				"visible_bounds_width": 5,

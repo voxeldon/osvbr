@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ES2020",
     "module": "ES6",
-    "outDir": "./packs/bp/scripts/vxl_vbrm",
+    "outDir": "./packs/bp/scripts/osvbr_vbrm",
     "rootDir": "./src",
     "strict": true,
     "esModuleInterop": true,

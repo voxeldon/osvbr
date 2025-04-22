@@ -1,5 +1,6 @@
-import { Block, BlockComponentPlayerPlaceBeforeEvent, BlockCustomComponent, BlockPermutation} from "@minecraft/server";
+import { Block, BlockComponentPlayerPlaceBeforeEvent, BlockCustomComponent, BlockPermutation } from "@minecraft/server";
 import { PACK_ID } from "../global";
+import { BlockStateSuperset } from "@minecraft/vanilla-data";
 
 export class SlabComponent implements BlockCustomComponent {
     public static readonly id: string = `${PACK_ID}:slab`;
@@ -12,7 +13,7 @@ export class SlabComponent implements BlockCustomComponent {
         if (newBlock.typeId === blockBelow.typeId) {
             if (blockBelow.permutation.getState('minecraft:vertical_half') !== 'bottom') return;
             event.permutationToPlace = BlockPermutation.resolve('minecraft:air');
-            blockBelow.setPermutation(blockBelow.permutation.withState('vxl:full_bit', true));
+            blockBelow.setPermutation(blockBelow.permutation.withState('osvbr:full_bit' as keyof BlockStateSuperset, true));
         }
     }
 }

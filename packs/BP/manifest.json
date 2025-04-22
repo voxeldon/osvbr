@@ -12,7 +12,7 @@
         "min_engine_version": [
             1,
             21,
-            41
+            70
         ]
     },
     "modules": [
@@ -34,7 +34,7 @@
                 0,
                 0
             ],
-            "entry": "scripts/vxl_vbrm/index.js"
+            "entry": "scripts/osvbr_vbrm/index.js"
         }
     ],
     "metadata": {

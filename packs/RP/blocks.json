@@ -1,20 +1,58 @@
 {
-	"format_version": [ 1, 1, 0 ],
-	"vxl:custom_tree_button"	        : {"sound": "wood"},
-	"vxl:custom_tree_door_tile"		    : {"sound": "wood"},
-	"vxl:custom_tree_fence_gate"	    : {"sound": "wood"},
-	"vxl:custom_tree_fence"			    : {"sound": "wood"},
-	"vxl:custom_tree_hanging_sign_tile"	: {"sound": "wood"},
-	"vxl:custom_tree_leaves"		    : {"sound": "grass"},
-	"vxl:custom_tree_log"               : {"sound": "wood"},
-	"vxl:custom_tree_planks"            : {"sound": "wood"},
-	"vxl:custom_tree_sapling_tile"		    : {"sound": "grass"},
-	"vxl:custom_tree_sign_tile"	        : {"sound": "wood"},
-	"vxl:custom_tree_slab"  		    : {"sound": "wood"},
-	"vxl:custom_tree_stairs"		    : {"sound": "wood"},
-	"vxl:custom_tree_trapdoor"		    : {"sound": "wood"},
-	"vxl:custom_tree_wood"			    : {"sound": "wood"},
-	"vxl:custom_tree_pressure_plate"	: {"sound": "wood"},
-	"vxl:stripped_custom_tree_log"      : {"sound": "wood"},
-	"vxl:stripped_custom_tree_wood"	    : {"sound": "wood"}
+	"format_version": [
+		1,
+		1,
+		0
+	],
+	"osvbr:custom_tree_button": {
+		"sound": "wood"
+	},
+	"osvbr:custom_tree_door": {
+		"sound": "wood"
+	},
+	"osvbr:custom_tree_fence_gate": {
+		"sound": "wood"
+	},
+	"osvbr:custom_tree_fence": {
+		"sound": "wood"
+	},
+	"osvbr:custom_tree_hanging_sign": {
+		"sound": "wood"
+	},
+	"osvbr:custom_tree_leaves": {
+		"sound": "grass"
+	},
+	"osvbr:custom_tree_log": {
+		"sound": "wood"
+	},
+	"osvbr:custom_tree_planks": {
+		"sound": "wood"
+	},
+	"osvbr:custom_tree_sapling": {
+		"sound": "grass"
+	},
+	"osvbr:custom_tree_sign": {
+		"sound": "wood"
+	},
+	"osvbr:custom_tree_slab": {
+		"sound": "wood"
+	},
+	"osvbr:custom_tree_stairs": {
+		"sound": "wood"
+	},
+	"osvbr:custom_tree_trapdoor": {
+		"sound": "wood"
+	},
+	"osvbr:custom_tree_wood": {
+		"sound": "wood"
+	},
+	"osvbr:custom_tree_pressure_plate": {
+		"sound": "wood"
+	},
+	"osvbr:stripped_custom_tree_log": {
+		"sound": "wood"
+	},
+	"osvbr:stripped_custom_tree_wood": {
+		"sound": "wood"
+	}
 }

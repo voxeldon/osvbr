@@ -1,10 +1,11 @@
 import { Block, BlockComponentOnPlaceEvent, BlockComponentPlayerDestroyEvent, BlockComponentPlayerInteractEvent, BlockCustomComponent, BlockPermutation, world } from "@minecraft/server";
 import { PACK_ID, SoundDefinition } from "../global";
+import { BlockStateSuperset } from "@minecraft/vanilla-data";
 
 export class DoorComponent implements BlockCustomComponent {
     public static readonly id = `${PACK_ID}:door`;
-    private readonly upperBlockBit = `${PACK_ID}:upper_block_bit`;
-    private readonly openBit = `${PACK_ID}:open_bit`;
+    private readonly upperBlockBit = `${PACK_ID}:upper_block_bit`as keyof BlockStateSuperset;
+    private readonly openBit = `${PACK_ID}:open_bit`as keyof BlockStateSuperset;
     constructor() {
         this.onPlace = this.onPlace.bind(this);
         this.onPlayerInteract = this.onPlayerInteract.bind(this);

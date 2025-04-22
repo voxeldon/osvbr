@@ -1,10 +1,11 @@
 import { BlockComponentOnPlaceEvent, BlockComponentPlayerInteractEvent, BlockCustomComponent, world } from "@minecraft/server";
 import { PACK_ID, SoundDefinition } from "../global";
+import { BlockStateSuperset } from "@minecraft/vanilla-data";
 
 export class TrapdoorComponent implements BlockCustomComponent {
     public static readonly id: string = `${PACK_ID}:trapdoor`;
-    private readonly openBit: string = `${PACK_ID}:open_bit`;
-    private readonly placedBit: string = `${PACK_ID}:placed_bit`;
+    private readonly openBit = `${PACK_ID}:open_bit` as keyof BlockStateSuperset;
+    private readonly placedBit = `${PACK_ID}:placed_bit` as keyof BlockStateSuperset;
     constructor() {
         this.onPlace = this.onPlace.bind(this);
         this.onPlayerInteract = this.onPlayerInteract.bind(this);

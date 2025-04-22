@@ -1,37 +1,61 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
-		"animation.vxl_custom.boat_setup": {
+		"animation.osvbr_custom.boat_setup": {
 			"loop": true,
 			"bones": {
 				"boat": {
-					"rotation": [0, 90, 0]
+					"rotation": [
+						0,
+						90,
+						0
+					]
 				}
 			}
 		},
-		"animation.vxl_custom.boat_move": {
+		"animation.osvbr_custom.boat_move": {
 			"loop": true,
 			"animation_length": 1.12,
 			"bones": {
 				"paddle_right": {
 					"rotation": {
-						"0.0": [0, 0, 0],
-						"1.12": [0, 0, 360]
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"1.12": [
+							0,
+							0,
+							360
+						]
 					}
 				},
 				"paddle_left": {
 					"rotation": {
-						"0.0": [0, 0, 0],
-						"1.12": [0, 0, 360]
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"1.12": [
+							0,
+							0,
+							360
+						]
 					}
 				}
 			}
 		},
-		"animation.vxl_custom.boat_damage": {
+		"animation.osvbr_custom.boat_damage": {
 			"loop": true,
 			"bones": {
 				"boat": {
-					"rotation": ["math.sin(query.anim_time*100)*3", 0, "math.sin(query.anim_time*500)*10"]
+					"rotation": [
+						"math.sin(query.anim_time*100)*3",
+						0,
+						"math.sin(query.anim_time*500)*10"
+					]
 				}
 			}
 		}

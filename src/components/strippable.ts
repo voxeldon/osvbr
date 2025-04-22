@@ -5,7 +5,7 @@ export class StrippableBlockComponent {
     public static registerGlobalComponent(): void {
         if (!StrippableBlockComponent.initialized) {
             world.beforeEvents.playerInteractWithBlock.subscribe((event: PlayerInteractWithBlockAfterEvent) => {
-                if (!event.isFirstEvent || !event.player || !event.itemStack || !event.block.hasTag('vxl_is_strippable')) return;
+                if (!event.isFirstEvent || !event.player || !event.itemStack || !event.block.hasTag('osvbr_is_strippable')) return;
                 const itemStack: ItemStack = event.itemStack;
                 const run: number = system.run(() => {
                     StrippableBlockComponent.onPlayerInteract(event.player, event.block, itemStack);

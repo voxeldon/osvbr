@@ -24,14 +24,11 @@ export class Common {
         return dimension.getBlock(Vector3.add(location, offset));
     }
 
-    public static getBlockNeighbors(block: Block): BlockNeighbors {
+    public static getBlockNeighbors(block: Block, invalidTypes: string[] = [], invalidTags: string[] = [], invalidCoreTypes: string[] = []): BlockNeighbors {
         const directions: (keyof BlockNeighbors)[] = ['north', 'south', 'east', 'west', 'above', 'below'];
-        const invalidTypes: string[] = ['minecraft:short_grass', 'minecraft:deadbush'];
-        const invalidTags: string[] = ['plant', 'leaves'];
-        const invalidCoreTypes: string[] = ['leaves'];
     
         const neighbors = directions.reduce((acc, direction) => {
-            const neighbor = (block as any)[direction]();
+            const neighbor = (block as Block)[direction]();
             if (neighbor && !invalidTypes.includes(neighbor.typeId) && !invalidTags.some(tag => neighbor.hasTag(tag)) && !neighbor.isAir && !neighbor.isLiquid && !invalidCoreTypes.some(type => neighbor.typeId.includes(type))) {
                 acc[direction] = neighbor;
             }

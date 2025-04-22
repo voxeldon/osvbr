@@ -2,10 +2,11 @@ import { Block, BlockComponentPlayerInteractEvent, BlockComponentRandomTickEvent
 import { Inventory } from "../_lib/inventory";
 import { Vector3 } from "../_lib/vector";
 import { PACK_ID, STRUCTURE_PATH } from "../global";
+import { BlockStateSuperset } from "@minecraft/vanilla-data";
 
 export class SaplingComponent implements BlockCustomComponent {
     public static readonly id: string = `${PACK_ID}:sapling`;
-    private readonly growth_bit: string = `${PACK_ID}:growth_bit`;
+    private readonly growth_bit = `${PACK_ID}:growth_bit` as keyof BlockStateSuperset;
     private readonly particleId: string = 'minecraft:crop_growth_emitter';
     private readonly triggerTypeId: string = 'minecraft:bone_meal';
     constructor() {

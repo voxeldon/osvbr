@@ -1,7 +1,7 @@
 {
 	"format_version": "1.8.0",
 	"render_controllers": {
-		"controller.render.vxl_custom_boat": {
+		"controller.render.osvbr_custom_boat": {
 			"geometry": "geometry.default",
 			"materials": [
 				{

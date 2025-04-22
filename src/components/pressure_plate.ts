@@ -1,9 +1,10 @@
 import {  BlockComponentTickEvent, BlockCustomComponent, Entity, world} from "@minecraft/server";
 import { PACK_ID } from "../global";
+import { BlockStateSuperset } from "@minecraft/vanilla-data";
 
 export class PressurePlate implements BlockCustomComponent {
     public static readonly id: string = `${PACK_ID}:pressure_plate`;
-    private readonly pressedBit: string = `${PACK_ID}:pressed_bit`;
+    private readonly pressedBit = `${PACK_ID}:pressed_bit` as keyof BlockStateSuperset;
     constructor() {
         this.onTick = this.onTick.bind(this);
     }

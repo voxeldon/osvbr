@@ -1,0 +1,164 @@
+{
+	"format_version": "1.21.70",
+	"minecraft:block": {
+		"description": {
+			"identifier": "osvbr:custom_tree_stairs",
+			"menu_category": {
+				"category": "construction",
+				"group": "minecraft:itemGroup.name.stairs"
+			},
+			"states": {
+				"osvbr:connection_bit": [
+					"none",
+					"upper_left_corner",
+					"lower_left_corner",
+					"upper_right_corner",
+					"lower_right_corner"
+				],
+				"osvbr:upper_block_bit": [
+					false,
+					true
+				],
+				"osvbr:placed_bit": [
+					false,
+					true
+				]
+			},
+			"traits": {
+				"minecraft:placement_position": {
+					"enabled_states": [
+						"minecraft:vertical_half"
+					]
+				},
+				"minecraft:placement_direction": {
+					"enabled_states": [
+						"minecraft:cardinal_direction"
+					]
+				}
+			}
+		},
+		"components": {
+			"tag:osvbr_custom": {},
+			"tag:minecraft:is_axe_item_destructible": {},
+			"tag:stairs": {},
+			"tag:wood": {},
+			"minecraft:custom_components": [
+				"osvbr:stairs"
+			],
+			"minecraft:transformation": {
+				"rotation": [
+					0,
+					180,
+					0
+				]
+			},
+			"minecraft:light_dampening": 0,
+			"minecraft:map_color": "#ffffff",
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0.5
+			},
+			"minecraft:flammable": true,
+			"minecraft:geometry": {
+				"identifier": "geometry.osvbr_custom.stairs",
+				"bone_visibility": {
+					"lower": "q.block_state('minecraft:vertical_half') == 'bottom'",
+					"upper": "q.block_state('minecraft:vertical_half') == 'top'",
+					"upper_left_corner": "q.block_state('osvbr:connection_bit') == 'upper_left_corner'",
+					"lower_left_corner": "q.block_state('osvbr:connection_bit') == 'lower_left_corner'",
+					"upper_right_corner": "q.block_state('osvbr:connection_bit') == 'upper_right_corner'",
+					"lower_right_corner": "q.block_state('osvbr:connection_bit') == 'lower_right_corner'"
+				}
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "osvbr_custom_tree_planks"
+				}
+			},
+			"minecraft:selection_box": true
+		},
+		"permutations": [
+			{
+				"condition": "q.block_state('osvbr:placed_bit') && q.block_state('minecraft:cardinal_direction') == 'north'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							180,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('osvbr:placed_bit') && q.block_state('minecraft:cardinal_direction') == 'south'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('osvbr:placed_bit') && q.block_state('minecraft:cardinal_direction') == 'east'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							90,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('osvbr:placed_bit') && q.block_state('minecraft:cardinal_direction') == 'west'",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							270,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:vertical_half') == 'top'",
+				"components": {
+					"minecraft:collision_box": {
+						"origin": [
+							-8,
+							8,
+							-8
+						],
+						"size": [
+							16,
+							8,
+							16
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:vertical_half') == 'bottom'",
+				"components": {
+					"minecraft:collision_box": {
+						"origin": [
+							-8,
+							0,
+							-8
+						],
+						"size": [
+							16,
+							8,
+							16
+						]
+					}
+				}
+			}
+		]
+	}
+}

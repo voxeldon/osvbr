@@ -1,0 +1,71 @@
+{
+	"format_version": "1.21.70",
+	"minecraft:block": {
+		"description": {
+			"identifier": "osvbr:custom_tree_leaves",
+			"menu_category": {
+				"category": "nature",
+				"group": "minecraft:itemGroup.name.leaves"
+			},
+			"states": {
+				"osvbr:opaque": [
+					false,
+					true
+				],
+				"osvbr:decay": [
+					true,
+					false
+				]
+			}
+		},
+		"components": {
+			"tag:minecraft:is_shear_item_destructible": {},
+			"tag:leaves": {},
+			"tag:osvbr_custom": {},
+			"minecraft:flammable": true,
+			"minecraft:tick": {
+				"interval_range": [
+					40,
+					400
+				],
+				"looping": true
+			},
+			"minecraft:map_color": "#ffffff",
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0.25
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 1
+			},
+			"minecraft:geometry": {
+				"identifier": "minecraft:geometry.full_block",
+				"culling": "osvbr:leaf_culling_rules"
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "osvbr_custom_tree_leaves",
+					"render_method": "blend",
+					"ambient_occlusion": true
+				}
+			},
+			"minecraft:loot": "loot_tables/empty.json",
+			"minecraft:custom_components": [
+				"osvbr:is_shear_item_destructible",
+				"osvbr:leaf"
+			]
+		},
+		"permutations": [
+			{
+				"condition": "q.block_state('osvbr:opaque')",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "osvbr_custom_tree_leaves_opaque",
+							"render_method": "opaque"
+						}
+					}
+				}
+			}
+		]
+	}
+}

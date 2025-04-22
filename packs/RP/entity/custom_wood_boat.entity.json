@@ -2,26 +2,26 @@
 	"format_version": "1.10.0",
 	"minecraft:client_entity": {
 		"description": {
-			"identifier": "vxl:custom_tree_boat",
+			"identifier": "osvbr:custom_tree_boat",
 			"materials": {
 				"default": "entity_alphatest",
 				"water": "entity_alphablend"
 			},
 			"textures": {
-				"default": "textures/vxl_custom_tree/entity/boat"
+				"default": "textures/osvbr_custom_tree/entity/boat"
 			},
 			"geometry": {
-				"default": "geometry.vxl_custom.boat"
+				"default": "geometry.osvbr_custom.boat"
 			},
 			"render_controllers": [
-				"controller.render.vxl_custom_boat"
+				"controller.render.osvbr_custom_boat"
 			],
 			"animations": {
-				"setup": "animation.vxl_custom.boat_setup",
-				"move": "animation.vxl_custom.boat_move",
-				"damage": "animation.vxl_custom.boat_damage",
-				"dammage.c": "controller.animation.vxl_custom.boat_damage",
-				"movement.c": "controller.animation.vxl_custom.boat_movement"
+				"setup": "animation.osvbr_custom.boat_setup",
+				"move": "animation.osvbr_custom.boat_move",
+				"damage": "animation.osvbr_custom.boat_damage",
+				"dammage.c": "controller.animation.osvbr_custom.boat_damage",
+				"movement.c": "controller.animation.osvbr_custom.boat_movement"
 			},
 			"scripts": {
 				"animate": [

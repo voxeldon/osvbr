@@ -1,10 +1,9 @@
-
 {
 	"format_version": "1.12.0",
 	"minecraft:geometry": [
 		{
 			"description": {
-				"identifier": "geometry.vxl_custom.chestboat",
+				"identifier": "geometry.osvbr_custom.chestboat",
 				"texture_width": 128,
 				"texture_height": 128,
 				"visible_bounds_width": 5,
